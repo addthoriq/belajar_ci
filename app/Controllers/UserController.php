@@ -26,4 +26,35 @@ class UserController extends BaseController
 
     $this->userModel->insert($data);
   }
+
+  public function get_data()
+  {
+    $datas = [
+      'users' => $this->userModel->findAll()
+    ];
+    // $data = [
+    //   'user' => $this->userModel->find(3)
+    // ];
+
+    // $datas = [
+    //   'users' => $this->userModel->selectMax('id')->first()
+    // ];
+    // SELECT * FROM users WHERE id = 2;
+
+    // var_dump($datas);
+
+    return view('get_data', $datas);
+  }
+
+  public function update()
+  {
+    $this->userModel->set('nama', 'Maman')->where('id', 3)->update();
+  }
+
+  public function delete()
+  {
+    $this->userModel->delete(5);
+    // $this->userModel->delete([1,3]);
+    // $this->userModel->where('nama', 'Ujang')->delete();
+  }
 }

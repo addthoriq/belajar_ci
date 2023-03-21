@@ -36,7 +36,11 @@ $routes->get('/beranda', 'beranda\Beranda::index');
 $routes->get('/siswa/(:any)', 'beranda\Beranda::getData/$1');
 
 $routes->get('/user', 'UserController::index');
+$routes->get('/user/list', 'UserController::get_data');
 $routes->post('/user', 'UserController::store');
+$routes->get('/user/ubah', 'UserController::update');
+$routes->get('/user/hapus', 'UserController::delete');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
