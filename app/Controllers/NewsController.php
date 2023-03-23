@@ -24,6 +24,6 @@ class NewsController extends BaseController
         'isi' => $isi
       ];
       $news->insert($data);
-      return redirect('beranda');
+      return redirect()->back();
     }
 }

@@ -22,7 +22,7 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
-<form class="mx-3" method="POST" action="/news-tambah">
+<form class="mx-3" method="POST" action="/news">
   <?= csrf_field() ?>
   <!-- Judul input -->
   <div class="form-outline mb-4">
