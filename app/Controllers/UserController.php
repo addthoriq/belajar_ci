@@ -42,9 +42,9 @@ class UserController extends BaseController
 
       // Nampilin tanpa ngakses file View
       // $datas = $this->userModel->findAll();
-      // foreach ($datas as $d) {
-      //   echo $d->id . " " . $d->nama . "<br>";
-      // }
+      foreach ($datas as $d) {
+        echo $d->id . " " . $d->nama . "<br>";
+      }
       
     return view('get_data', $datas);
   }

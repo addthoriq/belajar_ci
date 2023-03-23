@@ -41,6 +41,9 @@ $routes->post('/user', 'UserController::store');
 $routes->get('/user/ubah', 'UserController::update');
 $routes->get('/user/hapus', 'UserController::delete');
 
+$routes->get('/news', 'NewsController::index');
+$routes->post('/news-tambah', 'NewsController::store');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

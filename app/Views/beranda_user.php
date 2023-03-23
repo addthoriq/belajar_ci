@@ -9,13 +9,7 @@
 </head>
 
 <body>
-  <form action="/user" method="POST">
-    <?= csrf_field() ?>
-    <!-- <label for="namaOrang">Nama: </label>
-    <input type="text" name="nama" id="namaOrang">
-    <br><br> -->
-    <button type="submit">Kirim</button>
-  </form>
+  <h1>Selamat!</h1>
 </body>
 
 </html>
