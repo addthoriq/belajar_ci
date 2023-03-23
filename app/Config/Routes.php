@@ -43,6 +43,8 @@ $routes->get('/user/hapus', 'UserController::delete');
 
 $routes->get('/news', 'NewsController::index');
 $routes->post('/news', 'NewsController::store');
+$routes->add('/news/(:segment)/edit', 'NewsController::edit/$1');
+$routes->get('/news/(:segment)/delete', 'NewsController::delete/$1');
 
 /*
  * --------------------------------------------------------------------

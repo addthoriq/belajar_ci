@@ -7,14 +7,19 @@
       <th>Nomor</th>
       <th>Judul</th>
       <th>Isi</th>
+      <th>Tindakan</th>
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($newses as $news): ?>
+    <?php foreach ($newses as $news) : ?>
       <tr>
         <td><?= $news['id'] ?></td>
         <td><?= $news['judul'] ?></td>
         <td><?= $news['isi'] ?></td>
+        <td>
+          <a href="<?= site_url('news/' . $news['id'] . '/edit') ?>">Ubah</a>
+          <a href="<?= site_url('news/' . $news['id'] . '/delete') ?>" onClick="alert('Apakah anda yakin?')">Hapus</a>
+        </td>
       </tr>
     <?php endforeach ?>
   </tbody>
